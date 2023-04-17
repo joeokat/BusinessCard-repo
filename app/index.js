@@ -11,10 +11,32 @@ import {
 } from "../components";
 
 const Home = () => {
+  const router = useRouter();
+
   return (
-    <View>
-      <Text>Hello JoeOkat!</Text>
-    </View>
+    <SafeAreaView>
+      <Stack.Screen
+        options={{
+          headerStyle: { backgroundColor: COLORS.lightWhite },
+          headerShadowVisible: false,
+          headerLeft: () => (
+            <ScreenHeaderBtn iconUrl={icons.profil} dimension="100%" />
+          ),
+          headerTitle: "",
+        }}
+      />
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View
+          style={{
+            flex: 1,
+            padding: SIZES.medium,
+          }}
+        >
+          <Popularjobs />
+          <Nearbyjobs />
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
