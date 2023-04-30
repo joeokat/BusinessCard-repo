@@ -225,6 +225,7 @@ nav > ul > li > a:hover:before {
 
 .primary-cta:hover {
   background: rgb(223, 186, 142);
+  transition: ease-in 300ms;
 }
 
 .secondary-cta:hover .arrow-icon {
